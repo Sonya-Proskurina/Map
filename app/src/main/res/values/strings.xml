@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NewMap</string>
+    <string name="mapbox_access_token">pk.eyJ1Ijoic29ucDIwMDEiLCJhIjoiY2ttbTMyN3NiMGNleDJ2bXpldndwcTdoYyJ9.2AeD7GyyIlf0O6vz87_VGA</string>
+</resources>
