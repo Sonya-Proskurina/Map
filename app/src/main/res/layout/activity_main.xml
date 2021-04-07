@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_height="match_parent"
     app:ignore="NamespaceTypo">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_on_top_of_map"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="32dp" />
-
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
         android:layout_weight="1"
@@ -21,31 +14,35 @@
         mapbox:mapbox_cameraTargetLat="25.2854"
         mapbox:mapbox_cameraTargetLng="51.5310"
         mapbox:mapbox_cameraZoom="7"/>
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_on_top_of_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginBottom="8dp" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:orientation="vertical">
     <Button
         android:id="@+id/myLocationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
         android:text="Where am I"
-        android:src="@android:drawable/ic_menu_mylocation"
         app:borderWidth="0dp"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
         app:fabSize="mini" />
     <Button
         android:id="@+id/startButton"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:enabled="false"
-        android:text="Start navigation"
-        mapbox:layout_constraintStart_toStartOf="parent"
-        mapbox:layout_constraintTop_toTopOf="parent" />
-
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:text="Start navigation" />
 </LinearLayout>
+
+</FrameLayout>
